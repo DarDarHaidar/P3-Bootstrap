@@ -1,0 +1,43 @@
+body {
+    background-color: #fafafa;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+.post-card .card-img-top {
+    object-fit: cover;
+    height: 150px; /* Menjaga tinggi card konsisten */
+    width: 150px;
+}
+.profile-bio p {
+    white-space: pre-line; /* Menjaga baris baru di bio */
+}
+/* Style untuk menyeimbangkan gambar di grid */
+.row.g-1 > .col-6 > .card > img,
+.row.g-1 > .col-md-4 > .card > img,
+.row.g-1 > .col-lg-3 > .card > img {
+    height: 100%; /* Membuat gambar mengisi seluruh tinggi card */
+}
+
+/* Mengatur tinggi gambar secara responsif */
+@media (min-width: 992px) {
+    .post-card {
+        height: 250px; /* Tinggi tetap untuk desktop */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .post-card {
+        height: 200px; /* Tinggi tetap untuk tablet */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .post-card {
+        height: 150px; /* Tinggi tetap untuk mobile */
+    }
+}
